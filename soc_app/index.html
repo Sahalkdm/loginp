@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .gmd {
+  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  -ms-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  -o-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+    </style>
+</head>
+<body>
+    <header style="background:rgb(193, 160, 111)">
+       <div class="row">
+        <div class="col-md-12">
+            <div style="float: left;">
+            <img class="rounded-circle" style="height:4rem" src="data:image/jpeg;base64,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">
+        </div>
+        <div style="float: left;padding-top: 1rem; padding-left: 1rem;">
+            <h4 style="font-family:  Helvetica, Arial, sans-serif;color:rgb(126, 63, 23)">
+                IITM Sports Organising Committe
+            
+            </h4>
+        </div>
+        </div>
+        
+    </div> 
+    </header>
+    <section  style="background-image: url('https://designshack.net/wp-content/uploads/geo-background.jpg');">
+    <div class="container">
+        <div class="row text-center  p-5">
+            <div class="col-md-6 my-auto">
+                <div class="rounded gmd text-center p-3" style="height:35rem; ">
+                    <img src="logo.PNG" style="height:10rem">
+                    <h3 >Login</h3>
+                    <form style="text-align:left" class="pl-5 pr-5">
+                        <div class="form-group" >
+                          <label for="inputEmail4">User-id</label>
+                          <div class="input-group">
+                            <div class="input-group-addon bg-warning pt-2 text-center" style="height:2.4rem; width: 1.5rem;">
+                                <i class="fa-solid fa-envelope"></i> 
+                            </div>
+                            <input type="email" class="form-control" placeholder="Enter email">
+                            
+                          </div>
+                          
+                          <small  class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputPassword4" >Password</label>
+                          <div class="input-group">
+                            <div class="input-group-addon bg-warning pt-2 text-center" style="height:2.4rem; width: 1.5rem;">
+                                <i class="fa-solid fa-lock"></i> 
+                            </div>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                          
+                        </div>
+                        
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                        </div>
+                        <div style="text-align:center">
+                        <button id="btn1" type="submit" class="btn shadow text-white" style=" width:40%; background-image: linear-gradient(to right, rgba(84, 83, 46, 0), rgb(103, 48, 21));">Login</button>
+                        </div>  
+                        
+                    </form>
+                    <div style="text-align:right; text-decoration:none; padding-top: 1rem; ">
+                        <a href="#" style="text-decoration:none; color:black ">Forgot password?</a>
+                     </div>
+                </div>
+
+            </div>
+            <div class="col-md-6 my-auto pt-4">
+                <div class="rounded gmd p-3 pt-5" style="height:35rem;">
+                    <div>
+                        <h2 style="margin-top:5rem; font-family:Verdana, Geneva, Tahoma, sans-serif"><strong>IITM SPORTS</strong></h2>
+                        <p style="text-align:left">IIT Madras, the home to some of the best brains in the country is also home to several top notch athletes. With the best infrastructure facilities available on campus, IIT Madras boasts a sports culture that is of quite a high standard.
+                            <a href="https://students.iitm.ac.in/iitmsports/" class="">read more...</a>
+                        </p>
+                        <a  href="https://students.iitm.ac.in/iitmsports/" class="btn shadow text-white" style=" width:60%; background-image: linear-gradient(to right, rgb(187, 139, 87) , rgb(121, 64, 12));">Go to Website</a>
+                    </div>
+                    <div class="form-group" style="text-align:left;padding-top:2rem">
+                        <h5><label for="Commands">Commands</label></h5>
+                        <textarea class="form-control " placeholder="Type commands here..." cols="30" rows="3" style="background:rgb(250, 239, 224)"></textarea>
+                      </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<footer class="text-white" style="background:rgb(151, 67, 7) ;text-align: center;">
+    <a href="https://www.facebook.com/SportsIITM/"><i class="fa-brands fa-facebook-square fa-2x p-2 red-text" style="color: #fff8e1;"></i></a>
+    <a href="https://www.instagram.com/iitmsports/?hl=en"><i class="fa-brands fa-instagram-square fa-2x p-2" style="color: #fff8e1;"></i></a>
+    <a href="https://www.youtube.com/channel/UCnYOzjdorzacX3Ji2BfEYZg"><i class="fa-brands fa-youtube fa-2x p-2" style="color: #fff8e1;"></i></a>
+    <a href="https://in.linkedin.com/company/sociitm"><i class="fa-brands fa-linkedin-in fa-2x p-2" style="color: #fff8e1;"></i></a>
+    <p>Copyrights</p>
+
+
+</footer>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a5496fd0d2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            
+             $("#btn1").mousedown(function(){
+                $(this).css({"background":"green"})
+             })
+             $("#btn1").mouseenter(function(){
+                $(this).css({"background":"brown"})
+             })
+             $("#btn1").mouseleave(function(){
+                $(this).css({"background":"linear-gradient(to right, rgba(84, 83, 46, 0), rgb(103, 48, 21))"})
+             })
+            
+        })
+    </script>
+</body>
+</html>
